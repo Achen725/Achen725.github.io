@@ -1,7 +1,6 @@
 import React from "react";
 import { stackList } from "../../data/ProjectData";
 import {
-  Image,
   Technologies,
   Tech,
   TechImg,
@@ -19,7 +18,7 @@ function About() {
             Hello! My name is <strong>Andy Chen</strong>! 
           </div>
           <div className="AboutBio tagline2">
-            I have become confident using the following technologies.
+            I have experience in the following technologies:
           </div>
           <Technologies>
             {stackList.map((stack, index) => (
