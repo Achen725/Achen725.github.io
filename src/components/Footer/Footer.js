@@ -1,39 +1,45 @@
 import React from "react";
-import styled from "styled-components";
+import { Container, Row, Col } from "react-bootstrap";
+import {
+  AiFillGithub,
+} from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 
-const FooterSection = styled.div`
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 250px;
-  position: relative;
-
-  span {
-    position: absolute;
-    bottom: 4rem;
-    color: #fff;
-
-    a {
-      text-decoration: underline;
-    }
-  }
-`;
 function Footer() {
+  let date = new Date();
+  let year = date.getFullYear();
   return (
-    <FooterSection>
-      <div className="Container">
-        <span>
-          Coded by{" "}
-          <a
-            href="https://github.com/Achen725/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            @Achen725
-          </a>{" "}
-        </span>
-      </div>
-    </FooterSection>
+    <Container fluid className="footer">
+      <Row>
+        <Col md="4" className="footer-copywright">
+          <h3>Designed and Developed by Andy Chen</h3>
+        </Col>
+        <Col md="4" className="footer-body">
+          <ul className="footer-icons">
+            <li className="social-icons">
+              <a
+                href="https://github.com/Achen725"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <AiFillGithub />
+              </a>
+            </li>
+            <li className="social-icons">
+              <a
+                href="https://www.linkedin.com/in/andychen725"
+                style={{ color: "white" }}
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <FaLinkedinIn />
+              </a>
+            </li>
+          </ul>
+        </Col>
+      </Row>
+    </Container>
   );
 }
 

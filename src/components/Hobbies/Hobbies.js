@@ -1,11 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import Particle from "../Particle";
-import Aboutcard from "./AboutCard";
-import TechStack from "./SkillSet/TechStack";
-import ToolStack from "./SkillSet/ToolStack";
-import LanguageStack from "./SkillSet/LanguageStack";
-
+import Investments from "./Investments";
 
 function About() {
   return (
@@ -22,9 +18,8 @@ function About() {
             }}
           >
             <h1 style={{ fontSize: "2.1em", paddingBottom: "20px" }}>
-              About <strong className="purple">me</strong>
+                Random <strong className="purple">Hobbies</strong>
             </h1>
-            <Aboutcard />
           </Col>
           <Col
             md={5}
@@ -33,18 +28,9 @@ function About() {
           >
           </Col>
         </Row>
-        <h1 className="project-heading">
-          Tools and <strong className="purple">Technologies </strong>
-        </h1>
-        <TechStack />
-        <h1 className="project-heading">
-          Proficient <strong className="purple">Programming Languages </strong>
-        </h1>
-        <LanguageStack />
-        <h1 className="project-heading">
-          <strong className="purple">Software</strong> I use
-        </h1>
-        <ToolStack />
+        <Row>
+            <Investments/>
+        </Row>
       </Container>
     </Container>
   );
